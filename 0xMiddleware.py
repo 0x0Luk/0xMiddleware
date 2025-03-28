@@ -88,8 +88,8 @@ def main():
         print(f"{GREEN}[✔] {RESET}Found {len(confirmed_bypass)} bypass hits > middleware_exploited.txt{RESET}")
     if difference_only:
         print(f"{BLUE}[•] {RESET}Found {len(difference_only)} response diffs > middleware_response_diff.txt{RESET}")
-    if not confirmed_bypass and not difference_only:
-        print(f"{RED}[!] {RESET}No vulnerable URLs found ;-;{RESET}")
+    if not confirmed_bypass:
+        print(f"{RED}[!] {RESET}No vulnerable URLs found {BLUE};-;{RESET}")
 
 if __name__ == "__main__":
     main()
