@@ -1,4 +1,4 @@
-# CVE-2025-29927: Next.js Middleware Bypass Exploit Tool
+# CVE-2025-29927: Next.js Middleware Exploit
 
 This tool demonstrates and automates the exploitation of **CVE-2025-29927**, a vulnerability in **Next.js** that allows an attacker to **bypass middleware checks** (like authentication) by abusing the internal header `x-middleware-subrequest`.
 
