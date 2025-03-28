@@ -50,7 +50,7 @@ def check_middleware_bypass(url):
                 colored_url = f"{BLUE}{url}{RESET}"
                 print(f"{GREEN}[✔] Exploited:{RESET} {colored_url} {RED}(payload: {payload}){RESET}")
                 confirmed_bypass.append(f"{url} [payload: {payload}]")
-                with open("middleware_bypass_confirmed.txt", "a") as f:
+                with open("middleware_exploited.txt", "a") as f:
                     f.write(f"{url} [payload: {payload}]\n")
                 continue  
 
@@ -66,7 +66,7 @@ def check_middleware_bypass(url):
 
 def main():
     if len(sys.argv) < 2:
-        print(f"{RED}[!] {RESET}Usage: python3 middleware_bypass_checker.py <urls.txt>{RESET}")
+        print(f"{RED}[!] {RESET}Usage: python3 0xMiddleware.py <urls.txt>{RESET}")
         sys.exit(1)
 
     banner()
@@ -85,7 +85,7 @@ def main():
     print(f"\n{BLUE}[•] {RESET}Scan completed.{RESET}")
 
     if confirmed_bypass:
-        print(f"{GREEN}[✔] {RESET}Found {len(confirmed_bypass)} bypass hits > middleware_bypass_confirmed.txt{RESET}")
+        print(f"{GREEN}[✔] {RESET}Found {len(confirmed_bypass)} bypass hits > middleware_exploited.txt{RESET}")
     if difference_only:
         print(f"{BLUE}[•] {RESET}Found {len(difference_only)} response diffs > middleware_response_diff.txt{RESET}")
     if not confirmed_bypass and not difference_only:
