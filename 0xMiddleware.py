@@ -32,7 +32,7 @@ def banner():
                                                                                                                                                              
                    CVE-2025-29927 Exploit
             Next.js Middleware Bypass Vulnerability
-                        {RED}by 0x0luk{RESET}
+                         {RED}by 0x0luk{RESET}
     """)
 
 def check_middleware_bypass(url):
