@@ -51,20 +51,27 @@ Even if the target checks auth via middleware, **this bypasses it completely**.
 
 ---
 
-## ⚖️ Usage
+## ⚙️ Installation & Usage
+
+### 🔥 Clone the Repository
+```bash
+git clone https://github.com/0x0Luk/0xMiddleware.git
+cd 0xMiddleware
+```
 
 ### 📂 Input
-Provide a file (`urls.txt`) with one URL per line.
-
+Create a file called `urls.txt` with one URL per line:
 ```
 https://target.com/admin
 https://target.com/_next/static/asset.js
 ```
 
-### 🔧 Run the Tool
+### 🚀 Run the Tool
 ```bash
-python3 middleware_bypass_checker.py urls.txt
+python3 0xMiddleware.py urls.txt
 ```
+
+---
 
 ### ⚙️ What It Does
 - Sends requests to each URL with and without the exploit header
@@ -75,7 +82,7 @@ python3 middleware_bypass_checker.py urls.txt
   - (and more)
  
 - Logs:
-  - ✅ `middleware_bypass_confirmed.txt`: for true bypasses (403 → 200)
+  - ✅ `middleware_exploited.txt`: for true bypasses (403 → 200)
   - ⚠️ `middleware_response_diff.txt`: when response content differs
 
 ---
@@ -98,7 +105,7 @@ Also:
 [✔] Bypass successful: https://target.com/admin (payload: middleware)
 [•] Response difference detected: https://target.com/login (payload: src/middleware)
 
-[✔] Found 3 bypasses > middleware_bypass_confirmed.txt
+[✔] Found 3 bypasses > middleware_exploited.txt
 [•] Found 5 response diffs > middleware_response_diff.txt
 ```
 
